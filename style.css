@@ -1,135 +1,85 @@
-h1{
-    background-color: #29b6cb;
-    text-align: center;
-    color: white;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
 }
-
-body .container{
-    margin: auto;
+body {
+    font-family: sans-serif;
 }
-
-.row{
-    display: flex;
+a {
+    text-decoration: none;
+    color: #fff;
 }
-
-.coloumn{
-    flex: 50%;
-
+body {
+    background-image: linear-gradient(to bottom right, rgb(48, 213, 84), rgba(13, 150, 224, 0.126));
 }
-
-.form{
-    padding: 3em;
-    text-align: left;
-    border-right: 0.3rem solid #f7eab3;
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
 }
-
-.text_field input{
-    display: inline-flex;
-    width: 40%;
-}
-
-
-label{
-    display: inline-flex;
-    margin: auto;
-    width: 30%;
-    padding: 0.7em;
-}
-
-.radio-container{
-    display: inline-flex;
-    flex-direction: column;
-}
-
-.female{
-    margin-top: -20%;
-}
-
-.radio-container input{
-    margin-top: 1em;
-}
-
-.checkbox-container input{
-    margin-top: 1em;
-}
-
-.checkbox-container label{
+.calculator {
+    position: relative;
+    height: auto;
     width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(102, 224, 102);
 }
-
-
-.btn .btn-danger{
-    margin-left: 1em;
+#display {
+    margin: 0 10px;
+    height: 120px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 35px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
 }
-
-.Enrolled_Students{
-    text-align: center;
+#display::-webkit-scrollbar {
+    display: block;
+    height: 3px;
 }
-
-.result.row{
-    width: 90%;
-    display: none;
+button {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
 }
-
-.result .data.coloumn{
-    border: 1px solid grey;
-    text-align: left;
-    align-items: center;
-    align-content: center;
-    background-color: rgb(28, 173, 28);
-    color: white;
-    font-weight: bold;
-    width: 70%;
-    height: 2em;
-    flex: inherit;
-} 
-
-.result .image.coloumn{
-    border: 1px solid grey;
-    text-align: left;
-    align-items: center;
-    align-content: center;
-    background-color: rgb(28, 173, 28);
-    color: white;
-    font-weight: bold;
-    width: 30%;
-    flex: inherit;
-    height: 2em;
+button:hover {
+    transform: scale(1.1);
 }
-
-.result p{
-    margin: auto;
+button#equal {
+    height: 130px;
 }
-
-.enroll.row{
-    display: inline-flex;
-    width: 90%;
+.calculator {
+    background-color: #03903bd7;
 }
-
-.enroll .e_data.coloumn{
-    border: 1px solid grey;
-    text-align: left;
-    align-items: center;
-    align-content: center;
-    color: black;
-    width: 70%;
-    height: 9em;
-    flex: inherit;
-} 
-
-.enroll .e_image.coloumn{
-    border: 1px solid grey;
-    color: white;
-    width: 30%;
-    flex: inherit;
-    height: 9em;
+.calculator #display {
+    color: #f8fafb;
 }
-
-.enroll p{
-    margin: auto;
+.calculator button#clear {
+    background-color: #2e1f39;
+    color: #f8fafb;
 }
-
-img{
-    width: 100%;
-    height: 100%;
+.calculator button.btn-number {
+    background-color: #447189;
+    color: #fbfaf8;
+}
+.calculator button.btn-operator {
+    background-color: #2e1f39;
+    color: #90f0eb;
+}
+.calculator button.btn-equal {
+    background-color: #223323;
+    color: #ffffff;
 }
